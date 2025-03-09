@@ -30,7 +30,13 @@ interface Props {
         url.searchParams.append(key, value);
       });
     }
-    const res = await fetch(url.toString());
+    const res = await fetch(url.toString(), {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json',
+      },
+    });
+    
     let data = await res.json();
   
     if (wrappedByKey) {

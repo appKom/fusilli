@@ -1,0 +1,41 @@
+---
+import Card from '../components/Card.astro';
+import type Event from '../lib/events';
+import fetchApi from '../lib/strapi';
+import Navbar from '../components/Navbar.astro';
+
+const events = await fetchApi<Event[]>({
+    
+    endpoint: 'events?populate=coverImage',
+    wrappedByKey: 'data',
+})
+---
+
+
+<main>
+    
+    <header class="h-24 bg-[#000000] p-5 flex flex-row items-center gap-5">
+        <img src="/logo.png" alt="realfagskjelleren logo" class="h-full">
+        <h1 class="text-4xl text-[#FF6F00]">Realfagskjelleren</h1> <!--  bytt ut med Layout -->
+    </header>
+
+
+    <div class="flex justify-between items-center">
+        <p class="text-xl m-6">Tilbake</p>
+        <h1 class="text-3xl p-6 mx-auto">Arrangementer</h1>
+    </div>
+
+    <div class="flex justify-center items-center">
+        {
+            events.map((event: Event) => (
+                <Card 
+                    title={event.title} 
+                    body={event.description} 
+                    href="#" 
+                    imageSrc={`${import.meta.env.STRAPI_URL}${event.coverImage.url}`} 
+                />
+            ))
+        }
+        </div>
+    
+</main>
