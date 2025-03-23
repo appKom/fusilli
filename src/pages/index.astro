@@ -1,15 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
 ---
 
 <Layout title="Realfagskjelleren">
-	<main>
-		<h1 class="pt-32"><span class="text-gradient">Realfagskjelleren</span></h1>
-		<p class="instructions">
-			Realfagskjelleren er en bar, og tilhører linjeforeningene Online, Volvox & Alkymisten, Delta og Spanskrøret. Kjelleren befinner seg i Herman Krags Veg 12. Kjelleren arrangerer lavterskel arrangementer hvor alle er velkomne, til vanlig er det åpent hver Fredag hvor en etter en tung uke kan ta seg en rolig tur for å slappe av og møte andre medstudenter. I tillegg pleier det å arrangeres andre fester nå og da hvor igjen alle er velkomne. Ellers er det mulig å booke kjelleren for egne arrangementer og sammenkomster.
+	<main class="px-7">
+		<h1 class=" pt-32 text-center text-white text-4xl leading-tight">
+			<span class="block">For studenter</span>
+			<span class="pt-4 block -mt-1">Av studenter</span>
+		</h1>
+		  
+		<p class="instructions text-white text-center">
+			<span class="block">Stedet for alle nerdene på realfagsbygget!</span>
+			<span class="pt-4 block -mt-1">Realfagskjelleren er en bar, og tilhører linjeforeningene Online, Volvox & Alkymisten, Delta og Spanskrøret. Kjelleren befinner seg i Herman Krags Veg 12. Kjelleren arrangerer lavterskel arrangementer hvor alle er velkomne, til vanlig er det åpent hver Fredag hvor en etter en tung uke kan ta seg en rolig tur for å slappe av og møte andre medstudenter. I tillegg pleier det å arrangeres andre fester nå og da hvor igjen alle er velkomne. Ellers er det mulig å booke kjelleren for egne arrangementer og sammenkomster.</span>
 		</p>
-		<ul role="list" class="link-card-grid">
+<!-- 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
 				title="Arrangementer"
@@ -30,14 +36,33 @@ import Card from '../components/Card.astro';
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
+		</ul> -->
+
+
+		<div class="relative">		
+			<img
+			src="/folk.jpg"
+			alt="folk"
+			class="absolute top-0 left-0 w-80 border-4 border-white pointer-events-none z-10"
+		  />
+		  <img
+			src="/jul-i-kjelleren.png"
+			alt="jul"
+			class="absolute top-40 left-40 w-80 border-4 border-white pointer-events-none z-0"
+		  />
+		  
+			
+
+
+
+
+
+		<slot /></div>
 	</main>
 </Layout>
 
 <style>
-	body {
-		background-color: #FFC77D;
-	}
+
 	main {
 		margin: auto;
 		padding: 1rem;
@@ -99,6 +124,7 @@ import Card from '../components/Card.astro';
     background-color: #FF6F00; /* Oransje farge */
     color: white; /* Slik at teksten skiller seg ut */
     padding: 1rem;
+	min-height: 100vh;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gir litt skygge for dybde */
 	}
