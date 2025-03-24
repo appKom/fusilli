@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -20,7 +20,8 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
 	</head>
 	  
-	<body class="relative bg-[#FE710F] min-h-screen">
+	<body class="h-full bg-[#FE710F]">
+		
 		<img
 			src="/flekkVenstre.png"
 			alt="Flekk Venstre"
@@ -32,7 +33,7 @@ const { title } = Astro.props;
 		<img
 			src="/FlekkNedeHoyre.png"
 			alt="Flekk Nede Hoyre"
-			class="absolute bottom-10 right-0 z-0 w-80  pointer-events-none"/>
+			class="absolute bottom-0 right-0 z-0 w-80 pointer-events-none"/>
 
 
 		<slot />
@@ -47,6 +48,7 @@ const { title } = Astro.props;
 	html {
 		font-family: 'Akshar', sans-serif;
 		background-color: #FFFFFF;
+		height: 100%;
 	}
 </style>
 
