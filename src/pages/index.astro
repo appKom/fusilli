@@ -2,6 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
+
+
+import fetchApi from '../lib/strapi';
+
+const events = await fetchApi<Event[]>({
+    endpoint: 'events?populate=coverImage',
+    wrappedByKey: 'data',
+})
+
 ---
 
 <Layout title="Realfagskjelleren">
@@ -58,7 +67,13 @@ import Card from '../components/Card.astro';
 </Layout>
 
 <style>
+<<<<<<< Updated upstream
 
+=======
+	body {
+		background-color: #347dc6;
+	}
+>>>>>>> Stashed changes
 	main {
 		margin: auto;
 		padding: 1rem;
