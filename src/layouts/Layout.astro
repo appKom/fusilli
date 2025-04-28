@@ -1,23 +1,18 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import Navbar from '../components/Navbar.jsx';
 const { title } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-    <header class="h-24 w-full bg-[#0F0E0E] p-5 flex flex-row items-center gap-5 fixed ">
-        <img src="/logo.png" alt="realfagskjelleren logo" class="h-full">
-        <h1 class="text-4xl text-[#FF6F00]">Realfagskjelleren</h1>
-        <div class="flex flex-row gap-20 ml-auto pr-28">
-            <h3 class="text-xl text-[#FF6F00]"><a href="/events">Arrangementer</a></h3>
-            <h3 class="text-xl text-[#FF6F00]"><a href="/pictureWall">Bildevegg</a></h3>
-            <h3 class="text-xl text-[#FF6F00]"><a href="/menu">Meny</a></h3>
-        </div>
-        
-    </header>
+    <Navbar client:load />
+    <footer></footer>
+</BaseLayout>
 
     <slot />
 
     <footer>
 
     </footer>
+    
 </BaseLayout>

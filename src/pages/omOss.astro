@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import fetchApi from '../lib/strapi';
+
+const aboutUsData = await fetchApi({
+    endpoint: 'about-us', // Endre dette til riktig endpoint for informasjon om dere
+    wrappedByKey: 'data',
+});
+---
+
+<Layout title="Om Oss">
+  <main class="px-7">
+    <h1 class="pt-32 text-center text-black text-4xl leading-tight">
+      <span class="block">Om Realfagskjelleren</span>
+    </h1>
+
+    <p class="instructions description text-black text-center mt-6 text-lg max-w-3xl mx-auto">
+      Vi er et studentdrevet miljø i Realfagsbygget, hvor vi arrangerer lavterskel arrangementer for studenter på tvers av fagretninger. Her kan du slappe av, møte medstudenter og ta del i morsomme aktiviteter. Vår kjeller tilhører linjeforeningene Online, Volvox & Alkymisten, Delta og Spanskrøret, og vi er stolte av å være en møteplass for alle realfagsstudenter.
+    </p>
+
+    <div class="team-section mt-12 text-center">
+      <h2 class="text-2xl font-bold text-black">Møt Teamet</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6">
+        <!-- Eksempel på teammedlemmer -->
+        <div class="team-member bg-gray-100 p-4 rounded-lg shadow-md">
+          <img src="/team-member1.jpg" alt="Teammedlem 1" class="w-full h-40 object-cover rounded-t-lg" />
+          <h3 class="text-xl font-semibold mt-4">Ola Nordmann</h3>
+          <p class="text-gray-600">Leder</p>
+        </div>
+
+        <div class="team-member bg-gray-100 p-4 rounded-lg shadow-md">
+          <img src="/team-member2.jpg" alt="Teammedlem 2" class="w-full h-40 object-cover rounded-t-lg" />
+          <h3 class="text-xl font-semibold mt-4">Kari Normann</h3>
+          <p class="text-gray-600">Arrangementsansvarlig</p>
+        </div>
+
+        <div class="team-member bg-gray-100 p-4 rounded-lg shadow-md">
+          <img src="/team-member3.jpg" alt="Teammedlem 3" class="w-full h-40 object-cover rounded-t-lg" />
+          <h3 class="text-xl font-semibold mt-4">Per Hansen</h3>
+          <p class="text-gray-600">Markedsføring</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact mt-12 text-center">
+      <h2 class="text-2xl font-bold text-black">Kontakt Oss</h2>
+      <p class="mt-4 text-lg">Har du spørsmål? Ta gjerne kontakt med oss!</p>
+      <p class="mt-4 text-blue-500"><a href="mailto:kontakt@realfagskjelleren.no">kontakt@realfagskjelleren.no</a></p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+
+    color: black;
+  }
+
+  .instructions {
+		margin-left: auto;
+		margin-right: auto;
+        margin-bottom: 2rem;
+		max-width: 620px;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+  .description {
+    margin: 0 1rem;
+  }
+
+  .team-section {
+    margin: 2rem 0;
+  }
+
+  .team-member {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .team-member:hover {
+    transform: translateY(-10px);
+  }
+
+  .team-member img {
+    border-radius: 8px;
+  }
+
+  .contact a {
+    font-weight: bold;
+  }
+
+  @media (min-width: 640px) {
+    .team-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .team-section {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

@@ -13,11 +13,18 @@ const events = await fetchApi<Event[]>({
 <main>
     <h1>Events</h1>
     <ul>
-        {
-            events.map((event: Event) => (
-                <Card title= {event.title} body={event.descritpion}></Card>
-                <img src={`${import.meta.env.STRAPI_URL}${event.coverImage.url}`} />
-            ))
-        }
+      {
+        events.map((event: Event) => (
+          <li>
+            <Card
+              title={event.title}
+              body={event.description}
+              href={`/events/${event.id}`}
+            />
+            <img src={`${import.meta.env.STRAPI_URL}${event.coverImage.url}`} alt="Event cover" />
+          </li>
+        ))
+      }
     </ul>
-</main>
+  </main>
+  
