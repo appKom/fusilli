@@ -2,142 +2,114 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
-
-
 import fetchApi from '../lib/strapi';
 
 const events = await fetchApi<Event[]>({
     endpoint: 'events?populate=coverImage',
     wrappedByKey: 'data',
 })
-
 ---
 
 <Layout title="Realfagskjelleren">
-	<main class="px-7">
-		<h1 class=" pt-32 text-center text-white text-4xl leading-tight">
-			<span class="block">For studenter</span>
-			<span class="pt-4 block -mt-1">Av studenter</span>
-		</h1>
-		  
-		<p class="instructions text-white text-center">
-			<span class="block">Stedet for alle nerdene på realfagsbygget!</span>
-			<span class="pt-4 block -mt-1">Realfagskjelleren er en bar, og tilhører linjeforeningene Online, Volvox & Alkymisten, Delta og Spanskrøret. Kjelleren befinner seg i Herman Krags Veg 12. Kjelleren arrangerer lavterskel arrangementer hvor alle er velkomne, til vanlig er det åpent hver Fredag hvor en etter en tung uke kan ta seg en rolig tur for å slappe av og møte andre medstudenter. I tillegg pleier det å arrangeres andre fester nå og da hvor igjen alle er velkomne. Ellers er det mulig å booke kjelleren for egne arrangementer og sammenkomster.</span>
-		</p>
-<!-- 		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Arrangementer"
-				body="Klikk for å se våre arrangementer"
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Bilde side"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul> -->
+    <main class="px-7">
+        <h1 class="pt-44 text-center text-white text-4xl leading-tight">
+            <span class="block text-7xl">For studenter</span>
+            <span class="pt-4 text-7xl block -mt-1">Av studenter</span>
+        </h1>
+        <p class="instructions text-2xl  text-white text-center leading-9">
+            <span class="block">Stedet for alle nerdene på realfagsbygget!</span>
+            <span class="pt-10 block -mt-1">Realfagskjelleren er en av flere studentbarer som er å finne i “kjellerne” på Moholt studentby, som har som formål å skape et samlingssted og lavterskel sosialt tilbud for Trondheims studenter og holder åpent hver fredag</span>
+        </p>
 
-
-		<div class="relative">		
-			<img src="/folk.jpg" class="w-80 border-4 border-white block mx-auto" />
-		  <img
-			src="/jul-i-kjelleren.png"
-			alt="jul"
-			class="w-90 border-4 border-white block mx-auto" />
-		  
-		  
-			
+		<div class="flex justify-center mt-6">
+			<a href="/events" class="pt-3 pb-3 pl-10 pr-10 bg-white hover:bg-orange-600 text-orange-500 font-bold py-2 px-4 rounded-full transition duration-300">
+			  SE HVA SOM SKJER
+			</a>
+		</div>
 
 
 
-
-
-		<slot /></div>
-	</main>
+        <!-- <div class="relative">        
+            <img src="/folk.jpg" class="w-80 border-4 border-white block mx-auto" />
+            <img
+                src="/jul-i-kjelleren.png"
+                alt="jul"
+                class="w-90 border-4 border-white block mx-auto" />
+        </div> -->
+        <slot />
+    </main>
 </Layout>
 
 <style>
-<<<<<<< Updated upstream
-
-=======
-	body {
-		background-color: #347dc6;
-	}
->>>>>>> Stashed changes
-	main {
-		margin: auto;
+    main {
+		background-color: aqua;
+		background-image: url(/public/BakgrunnHjemmeside.png);
+		width: 100%;
+		background-size: cover;
+		background-position: top center;
+		background-attachment: scroll;  /* Endret fra fixed til scroll */
+		background-repeat: no-repeat;
 		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
 		color: black;
 		font-size: 20px;
 		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-		
-	}
-	
-	.card {
-    background-color: #FF6F00; /* Oransje farge */
-    color: white; /* Slik at teksten skiller seg ut */
-    padding: 1rem;
-	min-height: 100vh;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gir litt skygge for dybde */
-	}
-
+		min-height: 200vh; /* Sjekk om dette hjelper */
+    }
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .instructions {
+		margin-left: auto;
+		margin-right: auto;
+        margin-bottom: 2rem;
+		max-width: 620px;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .instructions code {
+        font-size: 0.8em;
+        font-weight: bold;
+        background: rgba(var(--accent-light), 12%);
+        color: rgb(var(--accent-light));
+        border-radius: 4px;
+        padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+    .card {
+        background-color: #FF6F00; /* Oransje farge */
+        color: white; /* Slik at teksten skiller seg ut */
+        padding: 1rem;
+        min-height: 100vh;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gir litt skygge for dybde */
+    }
 </style>
