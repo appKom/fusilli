@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav
       className={`mt-8 h-24 w-full fixed flex items-center justify-center px-6 bg-transparent ${visible ? '' : 'hidden'}`}
     >
-      <div className="mx-auto flex items-center text-xl gap-8">
+      <div className="mx-auto flex items-center text-xl gap-40">
         {/* Boks 1 */}
         <div className="flex justify-center">
           <h3 className="text-l text-white">
