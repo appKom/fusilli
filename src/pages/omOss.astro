@@ -9,6 +9,8 @@ const aboutUsData = await fetchApi({
 ---
 
 <Layout title="Om Oss" navbarTextColor="#FF5733">
+  <img src="public/flekk_omossOV.svg" alt="flekk" class="float-left">
+  <img src="public/flekk_omossOH.svg" alt="flekk" class="float-right">
   <main class="px-7">
     <div class="starter-page ps-[600px]">
       <h1 class="title pt-44 text-6xl leading-8">
@@ -19,24 +21,33 @@ const aboutUsData = await fetchApi({
       <p class="instructions">
         Vi er et studentdrevet miljø i Realfagsbygget, hvor vi arrangerer lavterskel arrangementer for studenter på tvers av fagretninger. Her kan du slappe av, møte medstudenter og ta del i morsomme aktiviteter. Vår kjeller tilhører linjeforeningene Online, Volvox & Alkymisten, Delta og Spanskrøret, og vi er stolte av å være en møteplass for alle realfagsstudenter.
       </p>
-      
-      <h1 class="title pt-52 text-6xl leading-8 text-orange-500">VÅR HISTORIE</h1>
+    </div>
+
+    <div class="about">
+      <h1 class="title pt-52 text-6xl leading-8 text-orange-500 font-bold">VÅR HISTORIE</h1>
+      <p class="pt-10">Nå holder Realfagskjelleren til i Herman Krags veg 12, men slik har det ikke alltid vært. I år 2000, når det ble åpnet for at andre linjer enn siving-linjene kunne søke om en kjeller på Moholt, søkte både V&A og Online. De ble tilbudt en kjeller på deling, i og med begge linjeforeningene søkte samtidig og det kun var en tilgjengelig. Dermed jobbet V&A og Online sammen, og hadde første åpning i i Herman Krags veg 15,  den 16 mai 2001. I 2003 ble linjeforeningen Delta med, etterfulgt av Spanskrøret i 2004. <br><br>
+        Alt gikk strålende for Realfagskjelleren (med unntak av et par innbrudd) de første 15 årene. Men, så kom “kjellerbrannen” i 2016. Røykutvikling i en annen linjeforeningskjeller førte til utrykning av brannvesenet, og når de ble klar over utseende til rømningsveiene var for majoriteten av Moholt kjellerne, ble samtlige stengt. Dette grunnet for dårlig standard, og kostbare utbedringer var nødvendig.
+        Organisasjonen Reddkjellerne ble stiftet, og etter 1 år med arrangementer på (det gamle) aktivitetshuset til SiT på Moholt og 1 år i gamle Moholt Barnehage (sammen med de fleste andre Moholt-kjellerne) fikk vi igjen vår egen kjeller! <br> <br>
+    
+        Denne gang i Herman Krags veg 12. Fadderukene i 2018 var første gang den nye kjelleren i HK12 var tilgjengelig for allmennheten, og den første ordinære åpningen var 31. august 2018 - en gledes dag for store og små, samt alt imellom. Etter en del dødtid rundt Covid-19 pandemien ble det igjen engasjement for å videre pusse opp kjelleren. <br><br>
+        Ved V&As generalforsamling 28. september 2022 ble det vedtatt at Realfagskjellern ikke lengre skulle regnes som en komite i linjeforeningen og er nå en undergruppe med opptak. Søk Kjellern! 
+      </p>
     </div>
   </main>
+  <img src="public/bar_bilde.png" alt="bilde av baren" class="absolute top-[10vw] left-[5vw] ">
+  <img src="public/flekk_omossMV.svg" alt="flekk" class="absolute top-[45vw] left-0">
+  <img src="public/flekk_omossNH.svg" alt="flekk" class="absolute top-[85vw] right-0">
+  
 </Layout>
 
 <style>
   main {
 		background-color: rgb(255, 255, 255);
-    background-image: url(/public/yeh.png);
-    margin-left: auto;
-		margin-right: auto;
 		width: 100%;
-		background-size: cover;
 		color: black;
 		font-size: 20px;
 		line-height: 1.6;
-		min-height: 200vh; /* Sjekk om dette hjelper */
+		min-height: 300vh; /* Sjekk om dette hjelper */
   }
 
   .title{
@@ -45,8 +56,23 @@ const aboutUsData = await fetchApi({
     /* padding-left: 700px; */
   }
   .instructions {
-    
     margin-bottom: 2rem;
 		max-width: 620px;
     }
+  
+  .starter-page {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about {
+    font-family: 'Gantari', sans-serif;
+    margin-top: 8rem;
+    line-height: 2rem;
+    margin-left: 10rem;
+    max-width: 800px; /* juster etter smak */
+    padding: 0 1rem;  /* litt luft på små skjermer */
+    margin-bottom: 10rem;
+  }
+
 </style>

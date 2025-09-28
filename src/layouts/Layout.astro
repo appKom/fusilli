@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import Navbar from '../components/Navbar.jsx';
+
 const { title } = Astro.props;
 ---
-
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
 <BaseLayout title={title}>
     <Navbar client:load textColor={Astro.props.navbarTextColor ?? '#FFFFFF'} />
     <footer></footer>
