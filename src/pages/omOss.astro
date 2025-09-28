@@ -8,97 +8,71 @@ const aboutUsData = await fetchApi({
 });
 ---
 
-<Layout title="Om Oss">
+<Layout title="Om Oss" navbarTextColor="#FF5733">
+  <img src="public/flekk_omossOV.svg" alt="flekk" class="float-left">
+  <img src="public/flekk_omossOH.svg" alt="flekk" class="float-right">
   <main class="px-7">
-    <h1 class="pt-32 text-center text-black text-4xl leading-tight">
-      <span class="block">Om Realfagskjelleren</span>
-    </h1>
-
-    <p class="instructions description text-black text-center mt-6 text-lg max-w-3xl mx-auto">
-      Vi er et studentdrevet miljø i Realfagsbygget, hvor vi arrangerer lavterskel arrangementer for studenter på tvers av fagretninger. Her kan du slappe av, møte medstudenter og ta del i morsomme aktiviteter. Vår kjeller tilhører linjeforeningene Online, Volvox & Alkymisten, Delta og Spanskrøret, og vi er stolte av å være en møteplass for alle realfagsstudenter.
-    </p>
-
-    <div class="team-section mt-12 text-center">
-      <h2 class="text-2xl font-bold text-black">Møt Teamet</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6">
-        <!-- Eksempel på teammedlemmer -->
-        <div class="team-member bg-gray-100 p-4 rounded-lg shadow-md">
-          <img src="/team-member1.jpg" alt="Teammedlem 1" class="w-full h-40 object-cover rounded-t-lg" />
-          <h3 class="text-xl font-semibold mt-4">Ola Nordmann</h3>
-          <p class="text-gray-600">Leder</p>
-        </div>
-
-        <div class="team-member bg-gray-100 p-4 rounded-lg shadow-md">
-          <img src="/team-member2.jpg" alt="Teammedlem 2" class="w-full h-40 object-cover rounded-t-lg" />
-          <h3 class="text-xl font-semibold mt-4">Kari Normann</h3>
-          <p class="text-gray-600">Arrangementsansvarlig</p>
-        </div>
-
-        <div class="team-member bg-gray-100 p-4 rounded-lg shadow-md">
-          <img src="/team-member3.jpg" alt="Teammedlem 3" class="w-full h-40 object-cover rounded-t-lg" />
-          <h3 class="text-xl font-semibold mt-4">Per Hansen</h3>
-          <p class="text-gray-600">Markedsføring</p>
-        </div>
-      </div>
+    <div class="starter-page ps-[600px]">
+      <h1 class="title pt-44 text-6xl leading-8">
+        <span class="block  text-orange-500 text-6xl font-bold w-72">BAREN FOR STUDENTENE, REALFAGSKJELLEREN</span>
+      </h1>
+      
+      <h2 class="instructions pt-5 text-4xl font-bold  w-96">Baren er drevet av studenter, for studenter</h2>
+      <p class="instructions">
+        Vi er et studentdrevet miljø i Realfagsbygget, hvor vi arrangerer lavterskel arrangementer for studenter på tvers av fagretninger. Her kan du slappe av, møte medstudenter og ta del i morsomme aktiviteter. Vår kjeller tilhører linjeforeningene Online, Volvox & Alkymisten, Delta og Spanskrøret, og vi er stolte av å være en møteplass for alle realfagsstudenter.
+      </p>
     </div>
 
-    <div class="contact mt-12 text-center">
-      <h2 class="text-2xl font-bold text-black">Kontakt Oss</h2>
-      <p class="mt-4 text-lg">Har du spørsmål? Ta gjerne kontakt med oss!</p>
-      <p class="mt-4 text-blue-500"><a href="mailto:kontakt@realfagskjelleren.no">kontakt@realfagskjelleren.no</a></p>
+    <div class="about">
+      <h1 class="title pt-52 text-6xl leading-8 text-orange-500 font-bold">VÅR HISTORIE</h1>
+      <p class="pt-10">Nå holder Realfagskjelleren til i Herman Krags veg 12, men slik har det ikke alltid vært. I år 2000, når det ble åpnet for at andre linjer enn siving-linjene kunne søke om en kjeller på Moholt, søkte både V&A og Online. De ble tilbudt en kjeller på deling, i og med begge linjeforeningene søkte samtidig og det kun var en tilgjengelig. Dermed jobbet V&A og Online sammen, og hadde første åpning i i Herman Krags veg 15,  den 16 mai 2001. I 2003 ble linjeforeningen Delta med, etterfulgt av Spanskrøret i 2004. <br><br>
+        Alt gikk strålende for Realfagskjelleren (med unntak av et par innbrudd) de første 15 årene. Men, så kom “kjellerbrannen” i 2016. Røykutvikling i en annen linjeforeningskjeller førte til utrykning av brannvesenet, og når de ble klar over utseende til rømningsveiene var for majoriteten av Moholt kjellerne, ble samtlige stengt. Dette grunnet for dårlig standard, og kostbare utbedringer var nødvendig.
+        Organisasjonen Reddkjellerne ble stiftet, og etter 1 år med arrangementer på (det gamle) aktivitetshuset til SiT på Moholt og 1 år i gamle Moholt Barnehage (sammen med de fleste andre Moholt-kjellerne) fikk vi igjen vår egen kjeller! <br> <br>
+    
+        Denne gang i Herman Krags veg 12. Fadderukene i 2018 var første gang den nye kjelleren i HK12 var tilgjengelig for allmennheten, og den første ordinære åpningen var 31. august 2018 - en gledes dag for store og små, samt alt imellom. Etter en del dødtid rundt Covid-19 pandemien ble det igjen engasjement for å videre pusse opp kjelleren. <br><br>
+        Ved V&As generalforsamling 28. september 2022 ble det vedtatt at Realfagskjellern ikke lengre skulle regnes som en komite i linjeforeningen og er nå en undergruppe med opptak. Søk Kjellern! 
+      </p>
     </div>
   </main>
+  <img src="public/bar_bilde.png" alt="bilde av baren" class="absolute top-[10vw] left-[5vw] ">
+  <img src="public/flekk_omossMV.svg" alt="flekk" class="absolute top-[45vw] left-0">
+  <img src="public/flekk_omossNH.svg" alt="flekk" class="absolute top-[85vw] right-0">
+  
 </Layout>
 
 <style>
   main {
-
-    color: black;
+		background-color: rgb(255, 255, 255);
+		width: 100%;
+		color: black;
+		font-size: 20px;
+		line-height: 1.6;
+		min-height: 300vh; /* Sjekk om dette hjelper */
   }
 
+  .title{
+    margin-right: 200px;
+    line-height: 60px;
+    /* padding-left: 700px; */
+  }
   .instructions {
-		margin-left: auto;
-		margin-right: auto;
-        margin-bottom: 2rem;
+    margin-bottom: 2rem;
 		max-width: 620px;
-        border: 1px solid rgba(var(--accent-light), 25%);
-        padding: 1.5rem;
-        border-radius: 8px;
     }
-
-  .description {
-    margin: 0 1rem;
+  
+  .starter-page {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .team-section {
-    margin: 2rem 0;
+  .about {
+    font-family: 'Gantari', sans-serif;
+    margin-top: 8rem;
+    line-height: 2rem;
+    margin-left: 10rem;
+    max-width: 800px; /* juster etter smak */
+    padding: 0 1rem;  /* litt luft på små skjermer */
+    margin-bottom: 10rem;
   }
 
-  .team-member {
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .team-member:hover {
-    transform: translateY(-10px);
-  }
-
-  .team-member img {
-    border-radius: 8px;
-  }
-
-  .contact a {
-    font-weight: bold;
-  }
-
-  @media (min-width: 640px) {
-    .team-section {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 768px) {
-    .team-section {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
 </style>
