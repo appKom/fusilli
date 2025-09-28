@@ -26,6 +26,7 @@ const Navbar = ({ textColor = '#ffffff' }) => {
   return (
     <nav className={`mt-8 h-24 w-full fixed flex items-center justify-center px-6 bg-transparent ${visible ? '' : 'hidden'}`}>
       <div className="mx-auto flex items-center text-xl gap-8" style={{ color: textColor }}>
+
         <div className="flex justify-center">
           <h3 className="text-l">
             <a href="/pictureWall">Bildevegg</a>

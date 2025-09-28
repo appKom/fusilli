@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 import fetchApi from '../lib/strapi';
 
 const events = await fetchApi<Event[]>({
