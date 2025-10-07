@@ -1,10 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import type Description from '../interfaces/description';
+import type Title from '../interfaces/title';
 import fetchApi from '../lib/strapi';
 
-const events = await fetchApi<Event[]>({
-    endpoint: 'events?populate=coverImage',
+const home_page_description = await fetchApi<Description>({
+    endpoint: 'descriptions/ztjsf58sockcqwhytjk0d8yc',
+    wrappedByKey: 'data',
+})
+
+const home_page_titles = await fetchApi<Title[]>({
+    endpoint: 'titles?filters[slug][$in][0]=for-studenter&filters[slug][$in][1]=av-studenter',
     wrappedByKey: 'data',
 })
 ---
@@ -15,12 +21,12 @@ const events = await fetchApi<Event[]>({
         <img src="flekkOH.svg" alt="" class="float-right">
         <div class="information">
             <h1 class="pt-44 text-center text-white text-4xl leading-tight">
-                <span class="block text-7xl">For studenter</span>
-                <span class="pt-4 text-7xl block -mt-1">Av studenter</span>
+                <span class="block text-7xl">{home_page_titles[0].Title}</span>
+                <span class="pt-4 text-7xl block -mt-1">{home_page_titles[1].Title}</span>
             </h1>
             <p class="text-2xl  text-white text-center leading-9">
                 <span class="block">Stedet for alle nerdene på realfagsbygget!</span>
-                <span class="block -mt-1">Realfagskjelleren er en av flere studentbarer som er å finne i “kjellerne” på Moholt studentby, som har som formål å skape et samlingssted og lavterskel sosialt tilbud for Trondheims studenter og holder åpent hver fredag</span>
+                <span class="block">{home_page_description.Description}</span>
             </p>
             
             <div class="flex justify-center mt-6">
